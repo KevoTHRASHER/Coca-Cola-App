@@ -7,6 +7,7 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 
 	private JLabel etiquetaTerminosCondiciones, etiquetaImagenCocaColaRojo, etiquetaMarcaAutor;
 	private JTextArea areaTerminosCondiciones;
+	private JScrollPane scrollPaneAreaTerminosCondiciones;
 	private JCheckBox cajaBoxAcepto;
 	private ImageIcon imagenCocaColaRojo;
 	private JButton botonNoAcepto, botonContinuar;
@@ -17,16 +18,30 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 		setTitle("Licencia de uso");
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
 
-		etiquetaTerminosCondiciones = new JLabel("TÉRMINOS Y CONDICIONES");
+		etiquetaTerminosCondiciones = new JLabel();
 		etiquetaTerminosCondiciones.setBounds(150,20,250,25);
 		etiquetaTerminosCondiciones.setFont(new Font("FreeSans",1,16));
 		add(etiquetaTerminosCondiciones);
 
-		areaTerminosCondiciones = new JTextArea("HOLA...");
+		areaTerminosCondiciones = new JTextArea();
 		areaTerminosCondiciones.setFont(new Font("Hack",0,12));
-		areaTerminosCondiciones.setBounds(15,55,460,200);
-		add(areaTerminosCondiciones);
-
+		areaTerminosCondiciones.setText("\n			TERMINOS Y CONDICIONES" + 
+				"\n\n    A. PROHIBIDA SU VENTA O DISTRIBUCIÓN SIN AUTORIZACIÓN." + 
+				"\n    B. PROHIBIDA LA ALTERACIÓN DEL CODIGO FUENTE O DISEÑO DE LAS INTERFACES GRÁFICAS." + 
+				"\n    C. Kevo.THRASHER NO SE HACE RESPONSABLE DEL MAL USO DE ESTE SOFTWARE." + 
+				"\n\n    LOS ACUERDOS LEGALES EXPUESTOS A CONTINUACIÓN RIGEN EL USO QUE USTED HAGA DE ESTE SOFTWARE " + 
+				"\n    (Kevo.THRASHER AUTOR), NO SE RESPOSABILIZA DEL USO QUE USTED HAGA CON ESTE " + 
+				"\n    SOFTWARE Y SUS SERVICIOS. PARA ACEPTAR ESTOS TERMINOS HAGA CLICK EN (ACEPTAR)" + 
+				"\n    SI USTED NO ACEPTA ESTOS TERMINOS, HAGA CLICK EN (NO ACEPTO) Y NO UTILICE ESTE" +
+				"\n    SOFTWARE." + 
+				"\n\n    PARA MAYOR INFORMACIÓN SOBRE NUESTROS PRODUCTOS O SERVICIOS, POR FAVOR VISITE" + 
+				"\n    https://github.com/KevoTHRASHER/Coca-Cola-App");
+		areaTerminosCondiciones.setEditable(false);
+		scrollPaneAreaTerminosCondiciones = new JScrollPane(areaTerminosCondiciones);
+		scrollPaneAreaTerminosCondiciones.setBounds(10,30,460,250);
+		scrollPaneAreaTerminosCondiciones.setFocusable(true);
+		add(scrollPaneAreaTerminosCondiciones);
+		
 		cajaBoxAcepto = new JCheckBox("Yo Acepto");
 		cajaBoxAcepto.setBounds(15,300,100,20);
 		cajaBoxAcepto.setFont(new Font("FreeSans",1,13));
@@ -43,6 +58,7 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 		botonNoAcepto = new JButton("No Acepto");
 		botonNoAcepto.setBounds(125,350,100,25);
 		botonNoAcepto.setFont(new Font("FreeSans",1,13));
+		botonNoAcepto.setEnabled(true);
 		botonNoAcepto.addActionListener(this);
 		add(botonNoAcepto);
 
