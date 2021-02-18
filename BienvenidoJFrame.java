@@ -16,12 +16,11 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 		getContentPane().setBackground(Color.RED);
 		setTitle("Bienvenido COCA-COLA App");
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
-		
+
 		imagenLogoCocaCola = new ImageIcon("images/logo-coca.png");
 		etiquetaLogoCocaCola = new JLabel();
 		etiquetaLogoCocaCola.setBounds(30,30,280,140);
 		etiquetaLogoCocaCola.setIcon(imagenLogoCocaCola);
-		etiquetaLogoCocaCola.setForeground(Color.WHITE);
 		etiquetaLogoCocaCola.setBackground(Color.RED);
 		etiquetaLogoCocaCola.setOpaque(true);
 		add(etiquetaLogoCocaCola);
