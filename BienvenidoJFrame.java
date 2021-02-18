@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class BienvenidoJFrame extends JFrame implements ActionListener {
 
-	private ImageIcon imagenBarraVentana, imagenLogoCocaCola;
+	private ImageIcon imagenLogoCocaCola;
 	private JLabel etiquetaLogoCocaCola, etiquetaSistemaControlVacaciones, etiquetaCapturaNombre, etiquetaMarcaRegistrada;
 	private JTextField campoTextoCapturaNombre;
 	private JButton botonIngresar;
@@ -13,9 +13,13 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 
 		setLayout(null);
 
+		getContentPane().setBackground(Color.RED);
+		setTitle("Bienvenido COCA-COLA App");
+		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
+		
 		imagenLogoCocaCola = new ImageIcon("images/logo-coca.png");
 		etiquetaLogoCocaCola = new JLabel();
-		etiquetaLogoCocaCola.setBounds(30,30,300,150);
+		etiquetaLogoCocaCola.setBounds(30,30,280,140);
 		etiquetaLogoCocaCola.setIcon(imagenLogoCocaCola);
 		etiquetaLogoCocaCola.setForeground(Color.WHITE);
 		etiquetaLogoCocaCola.setBackground(Color.RED);
@@ -23,6 +27,7 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 		add(etiquetaLogoCocaCola);
 
 		etiquetaSistemaControlVacaciones = new JLabel("Sistema de Control de Vacaciones");
+		etiquetaSistemaControlVacaciones.setFont(new Font("Andale Mono",3,13));
 		etiquetaSistemaControlVacaciones.setBounds(50,170,250,30);
 		etiquetaSistemaControlVacaciones.setForeground(Color.WHITE);
 		etiquetaSistemaControlVacaciones.setBackground(Color.RED);
@@ -30,6 +35,7 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 		add(etiquetaSistemaControlVacaciones);
 
 		etiquetaCapturaNombre = new JLabel("Ingrese su nombre :");
+		etiquetaCapturaNombre.setFont(new Font("Hack",1,12));
 		etiquetaCapturaNombre.setBounds(50,250,200,25);
 		etiquetaCapturaNombre.setOpaque(true);
 		etiquetaCapturaNombre.setBackground(Color.RED);
@@ -37,37 +43,38 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 		add(etiquetaCapturaNombre);
 
 		campoTextoCapturaNombre = new JTextField();
-		campoTextoCapturaNombre.setBounds(50,280,200,25);
+		campoTextoCapturaNombre.setBounds(50,280,230,25);
+		campoTextoCapturaNombre.setFont(new Font("Hack",1,14));
 		campoTextoCapturaNombre.setForeground(Color.RED);
 		add(campoTextoCapturaNombre);
 
 		botonIngresar = new JButton("Ingresar");
 		botonIngresar.setForeground(Color.RED);
 		botonIngresar.setBackground(Color.WHITE);
-		botonIngresar.setBounds(90,320,120,30);
-		add(botonIngresar);
+		botonIngresar.setBounds(100,325,120,30);
 		botonIngresar.addActionListener(this);
+		add(botonIngresar);
 
-		etiquetaMarcaRegistrada = new JLabel("2021 The Coca-Cola Company by Kevo.THRASHER");
+		etiquetaMarcaRegistrada = new JLabel("©2021 The Coca-Cola Company by Kevo.THRASHER");
+		etiquetaMarcaRegistrada.setFont(new Font("Hack",1,12));
 		etiquetaMarcaRegistrada.setBounds(10,380,320,25);
 		etiquetaMarcaRegistrada.setForeground(Color.WHITE);
 		etiquetaMarcaRegistrada.setBackground(Color.RED);
-
 		add(etiquetaMarcaRegistrada);
 
 	}
 
 	public void actionPerformed(ActionEvent ae) {
+		if(ae.getSource() == botonIngresar) {
 
+		}
 	}
 
 	public static void main(String[] args) {
 
 		BienvenidoJFrame bienvenidoJFrame = new BienvenidoJFrame();
 		bienvenidoJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		bienvenidoJFrame.setTitle("Bienvenido");
-		bienvenidoJFrame.getContentPane().setBackground(Color.RED);
-		bienvenidoJFrame.setBounds(0,0,350,450);
+		bienvenidoJFrame.setBounds(0,0,340,450);
 		bienvenidoJFrame.setResizable(true);
 		bienvenidoJFrame.setLocationRelativeTo(null);
 		bienvenidoJFrame.setVisible(true);
