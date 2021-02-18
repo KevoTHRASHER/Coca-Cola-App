@@ -45,7 +45,7 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 		botonNoAcepto.setFont(new Font("FreeSans",1,13));
 		botonNoAcepto.addActionListener(this);
 		add(botonNoAcepto);
-		
+
 		imagenCocaColaRojo = new ImageIcon("images/coca-cola-rojo.png");
 		etiquetaImagenCocaColaRojo = new JLabel();
 		etiquetaImagenCocaColaRojo.setBounds(210,290,300,100);
