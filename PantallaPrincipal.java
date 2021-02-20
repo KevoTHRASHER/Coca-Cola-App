@@ -2,6 +2,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.Font;
 
 public class PantallaPrincipal extends JFrame implements ActionListener {
 
@@ -19,9 +20,11 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		setLayout(null);
 
 		setTitle("COCA-COLA Vacaciones APP");
+		getContentPane().setBackground(Color.RED);
 
 		barraMenu = new JMenuBar();
-		setJMenuBar();
+		barraMenu.setBackground(Color.RED);
+		setJMenuBar(barraMenu);
 
 		menuOpciones = new JMenu("Opciones");
 		menuOpciones.setForeground(Color.WHITE);
@@ -51,19 +54,19 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		menuItemNuevo.addActionListener(this);
 		menuOpciones.add(menuItemNuevo);
 
-		menuItemSalir = new JMenuItem("Nuevo");
+		menuItemSalir = new JMenuItem("Salir");
 		menuItemSalir.setForeground(Color.RED);
 		menuItemSalir.addActionListener(this);
 		menuOpciones.add(menuItemSalir);
 
 		menuCalcular = new JMenu("Calcular");
-		menuCalcular.setForeground(Color.RED);
-		menuOpciones.add(menuCalcular);
+		menuCalcular.setForeground(Color.WHITE);
+		barraMenu.add(menuCalcular);
 
 		menuItemVacaciones = new JMenuItem("Vacaciones");
 		menuItemVacaciones.setForeground(Color.RED);
 		menuItemVacaciones.addActionListener(this);
-		menuOpciones.add(menuItemVacaciones);
+		menuCalcular.add(menuItemVacaciones);
 
 		menuAcerca = new JMenu("Acerca de");
 		menuAcerca.setForeground(Color.WHITE);
@@ -74,9 +77,9 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		menuItemAutor.addActionListener(this);
 		menuAcerca.add(menuItemAutor);
 
-		imagenCocaColaBlanco = new ImageIcon("images/coca-cola-blanco.png");
+		imagenCocaColaBlanco = new ImageIcon("images/logo-coca.png");
 		etiquetaImagenCocaColaBlanco = new JLabel(imagenCocaColaBlanco);
-		etiquetaImagenCocaColaBlanco.setBounds(20,30,280,240);
+		etiquetaImagenCocaColaBlanco.setBounds(20,30,240,120);
 		etiquetaImagenCocaColaBlanco.setBackground(Color.RED);
 		add(etiquetaImagenCocaColaBlanco);
 
@@ -86,14 +89,14 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		add(etiquetaBienvenido);
 
 		etiquetaDatosTrabajador = new JLabel("Datos del trabajador para el cálculo de vacaciones");
-		etiquetaDatosTrabajador.setFont("Andale Mono",2,16);
+		etiquetaDatosTrabajador.setFont(new Font("Andale Mono",3,16));
 		etiquetaDatosTrabajador.setForeground(Color.WHITE);
-		etiquetaDatosTrabajador.Background(Color.RED);
-		etiquetaDatosTrabajador.setBounds(70,320,100,50);
+		etiquetaDatosTrabajador.setBackground(Color.RED);
+		etiquetaDatosTrabajador.setBounds(30,190,400,50);
 		add(etiquetaDatosTrabajador);
 
 		etiquetaNombres = new JLabel("Nombre :");
-		etiquetaNombres.setBounds(50,400,100,25);
+		etiquetaNombres.setBounds(50,250,100,25);
 		etiquetaNombres.setFont(new Font("Hack",1,12));
 		etiquetaNombres.setForeground(Color.WHITE);
 		etiquetaNombres.setBackground(Color.RED);
@@ -101,7 +104,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		add(etiquetaNombres);
 
 		campoTextoNombres = new JTextField();
-		campoTextoNombres.setBounds(50,435,100,25);
+		campoTextoNombres.setBounds(50,280,100,25);
 		campoTextoNombres.setFont(new Font("Hack",1,14));
 		campoTextoNombres.setForeground(Color.RED);
 		add(campoTextoNombres);
@@ -122,14 +125,14 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 		etiquetaApellidoMaterno = new JLabel("Apellido Materno :");
 		etiquetaApellidoMaterno.setBounds(50,540,100,25);
-		etiquetaApellidoMaterno.setFont(n0ew Font("Hack",1,12));
+		etiquetaApellidoMaterno.setFont(new Font("Hack",1,12));
 		etiquetaApellidoMaterno.setForeground(Color.WHITE);
 		etiquetaApellidoMaterno.setBackground(Color.RED);
 		etiquetaApellidoMaterno.setOpaque(true);
 		add(etiquetaApellidoMaterno);
 
 		campoTextoApellidoMaterno = new JTextField();
-		campoTextoApellidoMaterno.setBounds(50,575.100,25);
+		campoTextoApellidoMaterno.setBounds(50,575,100,25);
 		campoTextoApellidoMaterno.setFont(new Font("Hack",1,14));
 		campoTextoApellidoMaterno.setForeground(Color.RED);
 		add(campoTextoApellidoMaterno);
@@ -192,6 +195,9 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		etiquetaMarcaAutor.setOpaque(true);
 		add(etiquetaMarcaAutor);
 
+	}
+
+	public void actionPerformed(ActionEvent ae) {
 
 	}
 
@@ -199,7 +205,6 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 		PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
 		pantallaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pantallaPrincipal.setBackground(Color.RED);
 		pantallaPrincipal.setBounds(0,0,480,600);
 		pantallaPrincipal.setResizable(true);
 		pantallaPrincipal.setLocationRelativeTo(null);
