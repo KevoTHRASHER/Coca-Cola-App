@@ -27,6 +27,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		setJMenuBar(barraMenu);
 
 		menuOpciones = new JMenu("Opciones");
+		menuOpciones.setFont(new Font("Andale Mono",1,14));
 		menuOpciones.setForeground(Color.WHITE);
 		barraMenu.add(menuOpciones);
 
@@ -60,6 +61,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		menuOpciones.add(menuItemSalir);
 
 		menuCalcular = new JMenu("Calcular");
+		menuCalcular.setFont(new Font("Andale Mono",1,14));
 		menuCalcular.setForeground(Color.WHITE);
 		barraMenu.add(menuCalcular);
 
@@ -69,6 +71,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		menuCalcular.add(menuItemVacaciones);
 
 		menuAcerca = new JMenu("Acerca de");
+		menuAcerca.setFont(new Font("Andale Mono",1,14));
 		menuAcerca.setForeground(Color.WHITE);
 		barraMenu.add(menuAcerca);
 
@@ -79,75 +82,75 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 		imagenCocaColaBlanco = new ImageIcon("images/logo-coca.png");
 		etiquetaImagenCocaColaBlanco = new JLabel(imagenCocaColaBlanco);
-		etiquetaImagenCocaColaBlanco.setBounds(20,30,240,120);
+		etiquetaImagenCocaColaBlanco.setBounds(15,10,250,125);
 		etiquetaImagenCocaColaBlanco.setBackground(Color.RED);
 		add(etiquetaImagenCocaColaBlanco);
 
-		etiquetaBienvenido = new JLabel("Bienvenido a COCA-COLA");
-		etiquetaBienvenido.setFont(new Font("Hack",1,20));
-		etiquetaBienvenido.setBounds(320,30,280,240);
+		etiquetaBienvenido = new JLabel("Bienvenido!");
+		etiquetaBienvenido.setFont(new Font("Andale Mono",1,22));
+		etiquetaBienvenido.setBounds(300,23,280,100);
 		add(etiquetaBienvenido);
 
 		etiquetaDatosTrabajador = new JLabel("Datos del trabajador para el cálculo de vacaciones");
-		etiquetaDatosTrabajador.setFont(new Font("Andale Mono",3,16));
+		etiquetaDatosTrabajador.setFont(new Font("Andale Mono",1,17));
 		etiquetaDatosTrabajador.setForeground(Color.WHITE);
 		etiquetaDatosTrabajador.setBackground(Color.RED);
-		etiquetaDatosTrabajador.setBounds(30,190,400,50);
+		etiquetaDatosTrabajador.setBounds(50,130,480,50);
 		add(etiquetaDatosTrabajador);
 
 		etiquetaNombres = new JLabel("Nombre :");
-		etiquetaNombres.setBounds(50,250,100,25);
-		etiquetaNombres.setFont(new Font("Hack",1,12));
+		etiquetaNombres.setBounds(30,200,150,25);
+		etiquetaNombres.setFont(new Font("Andale Mono",1,13));
 		etiquetaNombres.setForeground(Color.WHITE);
 		etiquetaNombres.setBackground(Color.RED);
 		etiquetaNombres.setOpaque(true);
 		add(etiquetaNombres);
 
 		campoTextoNombres = new JTextField();
-		campoTextoNombres.setBounds(50,280,100,25);
-		campoTextoNombres.setFont(new Font("Hack",1,14));
+		campoTextoNombres.setBounds(30,230,150,25);
+		campoTextoNombres.setFont(new Font("Andale Mono",1,14));
 		campoTextoNombres.setForeground(Color.RED);
 		add(campoTextoNombres);
 
 		etiquetaApellidoPaterno = new JLabel("Apellido Paterno :");
-		etiquetaApellidoPaterno.setBounds(50,470,100,25);
-		etiquetaApellidoPaterno.setFont(new Font("Hack",1,12));
+		etiquetaApellidoPaterno.setBounds(30,260,150,25);
+		etiquetaApellidoPaterno.setFont(new Font("Andale Mono",1,13));
 		etiquetaApellidoPaterno.setForeground(Color.WHITE);
 		etiquetaApellidoPaterno.setBackground(Color.RED);
 		etiquetaApellidoPaterno.setOpaque(true);
 		add(etiquetaApellidoPaterno);
 
 		campoTextoApellidoPaterno = new JTextField();
-		campoTextoApellidoPaterno.setBounds(50,505,100,25);
-		campoTextoApellidoPaterno.setFont(new Font("Hack",1,14));
+		campoTextoApellidoPaterno.setBounds(30,290,150,25);
+		campoTextoApellidoPaterno.setFont(new Font("Andale Mono",1,14));
 		campoTextoApellidoPaterno.setForeground(Color.RED);
 		add(campoTextoApellidoPaterno);
 
 		etiquetaApellidoMaterno = new JLabel("Apellido Materno :");
-		etiquetaApellidoMaterno.setBounds(50,540,100,25);
-		etiquetaApellidoMaterno.setFont(new Font("Hack",1,12));
+		etiquetaApellidoMaterno.setBounds(30,320,150,25);
+		etiquetaApellidoMaterno.setFont(new Font("Andale Mono",1,13));
 		etiquetaApellidoMaterno.setForeground(Color.WHITE);
 		etiquetaApellidoMaterno.setBackground(Color.RED);
 		etiquetaApellidoMaterno.setOpaque(true);
 		add(etiquetaApellidoMaterno);
 
 		campoTextoApellidoMaterno = new JTextField();
-		campoTextoApellidoMaterno.setBounds(50,575,100,25);
-		campoTextoApellidoMaterno.setFont(new Font("Hack",1,14));
+		campoTextoApellidoMaterno.setBounds(30,350,150,25);
+		campoTextoApellidoMaterno.setFont(new Font("Andale Mono",1,14));
 		campoTextoApellidoMaterno.setForeground(Color.RED);
 		add(campoTextoApellidoMaterno);
 
 		etiquetaDepartamento = new JLabel("Selecciona el Departamento");
-		etiquetaDepartamento.setBounds(200,400,100,25);
-		etiquetaDepartamento.setFont(new Font("Hack",1,12));
+		etiquetaDepartamento.setBounds(220,200,225,25);
+		etiquetaDepartamento.setFont(new Font("Andale Mono",1,13));
 		etiquetaDepartamento.setForeground(Color.WHITE);
 		etiquetaDepartamento.setBackground(Color.RED);
 		etiquetaDepartamento.setOpaque(true);
 		add(etiquetaDepartamento);
 
 		comboDepartamento = new JComboBox();
-		comboDepartamento.setBounds(50,435,100,25);
-		comboDepartamento.setFont(new Font("Hack",1,14));
+		comboDepartamento.setBounds(220,230,225,25);
+		comboDepartamento.setFont(new Font("Andale Mono",1,14));
 		comboDepartamento.setForeground(Color.RED);
 		add(comboDepartamento);
 
@@ -155,17 +158,17 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		comboDepartamento.addItem("Departamento Logística");
 		comboDepartamento.addItem("Departamento Gerencia");
 
-		etiquetaAntiguedad = new JLabel("Selecciona el Antiguedad");
-		etiquetaAntiguedad.setBounds(200,470,100,25);
-		etiquetaAntiguedad.setFont(new Font("Hack",1,12));
+		etiquetaAntiguedad = new JLabel("Selecciona la Antiguedad");
+		etiquetaAntiguedad.setBounds(220,260,225,25);
+		etiquetaAntiguedad.setFont(new Font("Andale Mono",1,13));
 		etiquetaAntiguedad.setForeground(Color.WHITE);
 		etiquetaAntiguedad.setBackground(Color.RED);
 		etiquetaAntiguedad.setOpaque(true);
 		add(etiquetaAntiguedad);
 
 		comboAntiguedad = new JComboBox();
-		comboAntiguedad.setBounds(200,505,100,25);
-		comboAntiguedad.setFont(new Font("Hack",1,14));
+		comboAntiguedad.setBounds(220,290,225,25);
+		comboAntiguedad.setFont(new Font("Andale Mono",1,14));
 		comboAntiguedad.setForeground(Color.RED);
 		add(comboAntiguedad);
 
@@ -174,22 +177,23 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		comboAntiguedad.addItem("7 años o más de servicio");
 
 		etiquetaCalculo = new JLabel("Resultado del Cálculo :");
-		etiquetaCalculo.setBounds(200,540,100,25);
-		etiquetaCalculo.setFont(new Font("Hack",1,12));
+		etiquetaCalculo.setBounds(220,320,225,25);
+		etiquetaCalculo.setFont(new Font("Andale Mono",1,13));
 		etiquetaCalculo.setForeground(Color.WHITE);
 		etiquetaCalculo.setBackground(Color.RED);
 		etiquetaCalculo.setOpaque(true);
 		add(etiquetaCalculo);
 
 		areaTextoCalculo = new JTextArea();
-		areaTextoCalculo.setBounds(200,575,200,75);
-		areaTextoCalculo.setFont(new Font("Hack",1,14));
+		areaTextoCalculo.setText("\n Aquí aparece el resultado del cálculo \n de las vacaciones.");
+		areaTextoCalculo.setBounds(220,350,290,100);
+		areaTextoCalculo.setFont(new Font("Andale Mono",1,13));
 		areaTextoCalculo.setForeground(Color.RED);
 		add(areaTextoCalculo);
 
 		etiquetaMarcaAutor = new JLabel("2021 The COCA-COLA Company | Todos los derechos reservados by Kevo.THRASHER");
-		etiquetaMarcaAutor.setBounds(50,610,400,25);
-		etiquetaMarcaAutor.setFont(new Font("Hack",1,12));
+		etiquetaMarcaAutor.setBounds(25,480,550,25);
+		etiquetaMarcaAutor.setFont(new Font("Hack",1,11));
 		etiquetaMarcaAutor.setForeground(Color.WHITE);
 		etiquetaMarcaAutor.setBackground(Color.RED);
 		etiquetaMarcaAutor.setOpaque(true);
@@ -205,7 +209,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 		PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
 		pantallaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pantallaPrincipal.setBounds(0,0,480,600);
+		pantallaPrincipal.setBounds(0,0,580,560);
 		pantallaPrincipal.setResizable(true);
 		pantallaPrincipal.setLocationRelativeTo(null);
 		pantallaPrincipal.setVisible(true);
