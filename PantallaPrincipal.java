@@ -203,6 +203,42 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent ae) {
 
+		if(ae.getSource() == menuItemRojo) {
+			getContentPane().setBackground(Color.RED);
+		}
+		if(ae.getSource() == menuItemMorado) {
+			getContentPane().setBackground(new Color(102,0,153));
+			barraMenu.setBackground(new Color(102,0,153));
+			etiquetaNombres.setBackground(new Color(102,0,153));
+			etiquetaApellidoPaterno.setBackground(new Color(102,0,153));
+			etiquetaApellidoMaterno.setBackground(new Color(102,0,153));
+			etiquetaMarcaAutor.setBackground(new Color(102,0,153));
+			etiquetaDepartamento.setBackground(new Color(102,0,153));
+			etiquetaAntiguedad.setBackground(new Color(102,0,153));
+			etiquetaCalculo.setBackground(new Color(102,0,153));
+		}
+		if(ae.getSource() == menuItemNegro) {
+			getContentPane().setBackground(Color.BLACK);
+			barraMenu.setBackground(Color.BLACK);
+			etiquetaNombres.setBackground(Color.BLACK);
+			etiquetaApellidoPaterno.setBackground(Color.BLACK);
+			etiquetaApellidoMaterno.setBackground(Color.BLACK);
+			etiquetaMarcaAutor.setBackground(Color.BLACK);
+			etiquetaDepartamento.setBackground(Color.BLACK);
+			etiquetaAntiguedad.setBackground(Color.BLACK);
+			etiquetaCalculo.setBackground(Color.BLACK);
+		}
+		if(ae.getSource() == menuItemNuevo) {
+			campoTextoNombres.setText("");
+			campoTextoApellidoPaterno.setText("");
+			campoTextoApellidoMaterno.setText("");
+			areaTextoCalculo.setText("");
+		}
+		if(ae.getSource() == menuItemSalir) {
+			if(JOptionPane.showConfirmDialog(null,"Desea SALIR del PROGRAMA","CERRAR PROGRAMA",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION ) {
+				System.exit(0);
+			}
+		}
 	}
 
 	public static void main(String[] args) {
