@@ -19,44 +19,44 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 
 		imagenLogoCocaCola = new ImageIcon("images/logo-coca.png");
 		etiquetaLogoCocaCola = new JLabel();
-		etiquetaLogoCocaCola.setBounds(30,30,280,140);
+		etiquetaLogoCocaCola.setBounds(30,20,260,130);
 		etiquetaLogoCocaCola.setIcon(imagenLogoCocaCola);
 		etiquetaLogoCocaCola.setBackground(Color.RED);
-		etiquetaLogoCocaCola.setOpaque(true);
+		etiquetaLogoCocaCola.setOpaque(false);
 		add(etiquetaLogoCocaCola);
 
 		etiquetaSistemaControlVacaciones = new JLabel("Sistema de Control de Vacaciones");
-		etiquetaSistemaControlVacaciones.setFont(new Font("Andale Mono",3,13));
-		etiquetaSistemaControlVacaciones.setBounds(50,170,250,30);
+		etiquetaSistemaControlVacaciones.setFont(new Font("Andale Mono",3,16));
+		etiquetaSistemaControlVacaciones.setBounds(30,120,250,30);
 		etiquetaSistemaControlVacaciones.setForeground(Color.WHITE);
 		etiquetaSistemaControlVacaciones.setBackground(Color.RED);
 		etiquetaSistemaControlVacaciones.setOpaque(true);
 		add(etiquetaSistemaControlVacaciones);
 
 		etiquetaCapturaNombre = new JLabel("Ingrese su nombre :");
-		etiquetaCapturaNombre.setFont(new Font("Hack",1,13));
-		etiquetaCapturaNombre.setBounds(50,210,200,25);
+		etiquetaCapturaNombre.setFont(new Font("Hack",1,14));
+		etiquetaCapturaNombre.setBounds(50,190,200,25);
 		etiquetaCapturaNombre.setOpaque(true);
 		etiquetaCapturaNombre.setBackground(Color.RED);
 		etiquetaCapturaNombre.setForeground(Color.WHITE);
 		add(etiquetaCapturaNombre);
 
 		campoTextoCapturaNombre = new JTextField();
-		campoTextoCapturaNombre.setBounds(50,240,230,25);
+		campoTextoCapturaNombre.setBounds(50,220,230,25);
 		campoTextoCapturaNombre.setFont(new Font("Hack",1,14));
 		campoTextoCapturaNombre.setForeground(Color.RED);
 		add(campoTextoCapturaNombre);
 
 		etiquetaContraseña = new JLabel("Ingresa tu contraseña :");
-		etiquetaContraseña.setFont(new Font("Hack",3,13));
-		etiquetaContraseña.setBounds(50,270,200,25);
+		etiquetaContraseña.setFont(new Font("Hack",1,14));
+		etiquetaContraseña.setBounds(50,250,200,25);
 		etiquetaContraseña.setBackground(Color.RED);
 		etiquetaContraseña.setForeground(Color.WHITE);
 		etiquetaContraseña.setOpaque(true);
 		add(etiquetaContraseña);
 
 		campoContraseña = new JTextField();
-		campoContraseña.setBounds(50,300,230,25);
+		campoContraseña.setBounds(50,280,230,25);
 		campoContraseña.setFont(new Font("Hack",1,14));
 		campoContraseña.setForeground(Color.RED);
 		add(campoContraseña);
@@ -64,7 +64,7 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 		botonIngresar = new JButton("Ingresar");
 		botonIngresar.setForeground(Color.RED);
 		botonIngresar.setBackground(Color.WHITE);
-		botonIngresar.setBounds(100,345,120,30);
+		botonIngresar.setBounds(100,325,120,30);
 		botonIngresar.addActionListener(this);
 		add(botonIngresar);
 
