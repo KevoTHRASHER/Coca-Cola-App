@@ -19,7 +19,7 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 
 		imagenLogoCocaCola = new ImageIcon("images/logo-coca.png");
 		etiquetaLogoCocaCola = new JLabel();
-		etiquetaLogoCocaCola.setBounds(30,20,260,130);
+		etiquetaLogoCocaCola.setBounds(20,20,260,130);
 		etiquetaLogoCocaCola.setIcon(imagenLogoCocaCola);
 		etiquetaLogoCocaCola.setBackground(Color.RED);
 		etiquetaLogoCocaCola.setOpaque(false);

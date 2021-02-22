@@ -9,7 +9,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 	private JMenuBar barraMenu;
 	private JMenu menuOpciones, menuColorFondo, menuCalcular, menuAcerca;
 	private JMenuItem menuItemRojo, menuItemMorado, menuItemNegro, menuItemNuevo, menuItemSalir, menuItemVacaciones, menuItemAutor;
-	private ImageIcon imagenCocaColaBlanco;
+	private ImageIcon imagenCocaColaBlanco,imagenAutor;
 	private JLabel etiquetaImagenCocaColaBlanco, etiquetaBienvenido, etiquetaDatosTrabajador, etiquetaNombres, etiquetaApellidoPaterno, etiquetaApellidoMaterno, etiquetaDepartamento, etiquetaAntiguedad, etiquetaCalculo, etiquetaMarcaAutor;
 	private JTextField campoTextoNombres, campoTextoApellidoPaterno, campoTextoApellidoMaterno;
 	private JComboBox comboDepartamento, comboAntiguedad;
@@ -18,9 +18,9 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 	public PantallaPrincipal() {
 
 		setLayout(null);
-
 		setTitle("COCA-COLA Vacaciones APP");
 		getContentPane().setBackground(Color.RED);
+		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
 
 		barraMenu = new JMenuBar();
 		barraMenu.setBackground(Color.RED);
@@ -79,6 +79,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		menuItemAutor.setForeground(Color.RED);
 		menuItemAutor.addActionListener(this);
 		menuAcerca.add(menuItemAutor);
+		imagenAutor = new ImageIcon("images/autor.png");
 
 		imagenCocaColaBlanco = new ImageIcon("images/logo-coca.png");
 		etiquetaImagenCocaColaBlanco = new JLabel(imagenCocaColaBlanco);
@@ -88,6 +89,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 
 		etiquetaBienvenido = new JLabel("Bienvenido!");
 		etiquetaBienvenido.setFont(new Font("Andale Mono",1,22));
+		etiquetaBienvenido.setForeground(Color.WHITE);
 		etiquetaBienvenido.setBounds(300,23,280,100);
 		add(etiquetaBienvenido);
 
@@ -154,6 +156,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		comboDepartamento.setForeground(Color.RED);
 		add(comboDepartamento);
 
+		comboDepartamento.addItem("");
 		comboDepartamento.addItem("Atencion a Clientes");
 		comboDepartamento.addItem("Departamento Logística");
 		comboDepartamento.addItem("Departamento Gerencia");
@@ -172,6 +175,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		comboAntiguedad.setForeground(Color.RED);
 		add(comboAntiguedad);
 
+		comboAntiguedad.addItem("");
 		comboAntiguedad.addItem("1 año de servicio");
 		comboAntiguedad.addItem("2 a 6 años de servicio");
 		comboAntiguedad.addItem("7 años o más de servicio");
@@ -191,7 +195,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		areaTextoCalculo.setForeground(Color.RED);
 		add(areaTextoCalculo);
 
-		etiquetaMarcaAutor = new JLabel("2021 The COCA-COLA Company | Todos los derechos reservados by Kevo.THRASHER");
+		etiquetaMarcaAutor = new JLabel("©2021 The COCA-COLA Company | Todos los derechos reservados by Kevo.THRASHER");
 		etiquetaMarcaAutor.setBounds(25,480,550,25);
 		etiquetaMarcaAutor.setFont(new Font("Hack",1,11));
 		etiquetaMarcaAutor.setForeground(Color.WHITE);
@@ -233,11 +237,16 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 			campoTextoApellidoPaterno.setText("");
 			campoTextoApellidoMaterno.setText("");
 			areaTextoCalculo.setText("");
+			comboDepartamento.setSelectedIndex(0);
+			comboAntiguedad.setSelectedIndex(0);
 		}
 		if(ae.getSource() == menuItemSalir) {
 			if(JOptionPane.showConfirmDialog(null,"Desea SALIR del PROGRAMA","CERRAR PROGRAMA",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION ) {
 				System.exit(0);
 			}
+		}
+		if(ae.getSource() == menuItemAutor) {
+		JOptionPane.showMessageDialog(null,"Desarrollado por Kevo.THRASHER\nhttps://github.com/KevoTHRASHER","Autor",JOptionPane.INFORMATION_MESSAGE,imagenAutor);
 		}
 	}
 

@@ -18,14 +18,14 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 		setTitle("Licencia de uso");
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
 
-		etiquetaTerminosCondiciones = new JLabel();
-		etiquetaTerminosCondiciones.setBounds(150,20,250,25);
+		etiquetaTerminosCondiciones = new JLabel("TÉRMINOS Y CONDICIONES");
+		etiquetaTerminosCondiciones.setBounds(150,10,250,25);
 		etiquetaTerminosCondiciones.setFont(new Font("FreeSans",1,16));
 		add(etiquetaTerminosCondiciones);
 
 		areaTerminosCondiciones = new JTextArea();
-		areaTerminosCondiciones.setFont(new Font("Hack",0,12));
-		areaTerminosCondiciones.setText("\n			TERMINOS Y CONDICIONES" + 
+		areaTerminosCondiciones.setFont(new Font("Hack",0,10));
+		areaTerminosCondiciones.setText("\n  TÉRMINOS Y CONDICIONES" + 
 				"\n\n    A. PROHIBIDA SU VENTA O DISTRIBUCIÓN SIN AUTORIZACIÓN." + 
 				"\n    B. PROHIBIDA LA ALTERACIÓN DEL CODIGO FUENTE O DISEÑO DE LAS INTERFACES GRÁFICAS." + 
 				"\n    C. Kevo.THRASHER NO SE HACE RESPONSABLE DEL MAL USO DE ESTE SOFTWARE." + 
@@ -38,10 +38,10 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 				"\n    https://github.com/KevoTHRASHER/Coca-Cola-App");
 		areaTerminosCondiciones.setEditable(false);
 		scrollPaneAreaTerminosCondiciones = new JScrollPane(areaTerminosCondiciones);
-		scrollPaneAreaTerminosCondiciones.setBounds(10,30,460,250);
+		scrollPaneAreaTerminosCondiciones.setBounds(10,40,460,240);
 		scrollPaneAreaTerminosCondiciones.setFocusable(true);
 		add(scrollPaneAreaTerminosCondiciones);
-		
+
 		cajaBoxAcepto = new JCheckBox("Yo Acepto");
 		cajaBoxAcepto.setBounds(15,300,100,20);
 		cajaBoxAcepto.setFont(new Font("FreeSans",1,13));
