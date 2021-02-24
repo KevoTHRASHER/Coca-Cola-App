@@ -84,10 +84,10 @@ public class Bienvenido extends JFrame implements ActionListener {
 			if (campoTextoCapturaNombre.getText().length() == 0 ) {
 				JOptionPane.showMessageDialog(null,"INTRODUCE tu NOMBRE","NOMBRE VACÍO",JOptionPane.WARNING_MESSAGE);
 			}
-			if(campoContraseña.getText().length() == 0) {
+			else if(campoContraseña.getText().length() == 0) {
 				JOptionPane.showMessageDialog(null,"INTRODUCE tu CONTRASEÑA","CONTRASEÑA VACÍA",JOptionPane.WARNING_MESSAGE);
 			}
-			if(campoTextoCapturaNombre.getText().equals(campoContraseña.getText())) {
+			else if(campoTextoCapturaNombre.getText().equals(campoContraseña.getText())) {
 				this.setVisible(false);
 				JOptionPane.showMessageDialog(null,"ACCESO OTORGADO");
 				Licencia licencia = new Licencia();
