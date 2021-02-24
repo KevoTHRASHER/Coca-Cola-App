@@ -276,13 +276,13 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 			}
 			else if(comboDepartamento.getSelectedIndex() == 1) {
 				if(comboAntiguedad.getSelectedIndex() == 1) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 6 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 6 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 2) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 14 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 14 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 3) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 20 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 20 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Favor de SELECCIONAR el numero de años laborados ANTIGUEDAD","ESCOGE ANTIGUEDAD",JOptionPane.WARNING_MESSAGE);
@@ -290,13 +290,13 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 			}
 			else if(comboDepartamento.getSelectedIndex() == 2) {
 				if(comboAntiguedad.getSelectedIndex() == 1) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 7 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 7 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 2) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 15 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 15 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 3) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 22 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 22 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Favor de SELECCIONAR el numero de años laborados ANTIGUEDAD","ESCOGE ANTIGUEDAD",JOptionPane.WARNING_MESSAGE);
@@ -304,13 +304,13 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 			}
 			else if(comboDepartamento.getSelectedIndex() == 3) {
 				if(comboAntiguedad.getSelectedIndex() == 1) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 10 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 10 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 2) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 20 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 20 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else if(comboAntiguedad.getSelectedIndex() == 3) {
-					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText()  + "\ndisfruta tus 30 días de vacaciones, COCA-COLA te agradece mucho tu trabajo");
+					areaTextoCalculo.setText("Hola " + campoTextoNombres.getText() + " " + campoTextoApellidoPaterno.getText() + " " + campoTextoApellidoPaterno.getText() + "\ndisfruta tus 30 días de vacaciones\nCOCA-COLA te agradece mucho tu trabajo");
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Favor de SELECCIONAR el numero de años laborados ANTIGUEDAD","ESCOGE ANTIGUEDAD",JOptionPane.WARNING_MESSAGE);
