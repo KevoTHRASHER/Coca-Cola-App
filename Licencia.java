@@ -3,7 +3,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class LicenciaJFrame extends JFrame implements ActionListener, ChangeListener {
+public class Licencia extends JFrame implements ActionListener, ChangeListener {
 
 	private JLabel etiquetaTerminosCondiciones, etiquetaImagenCocaColaRojo, etiquetaMarcaAutor;
 	private JTextArea areaTerminosCondiciones;
@@ -11,12 +11,16 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 	private JCheckBox cajaBoxAcepto;
 	private ImageIcon imagenCocaColaRojo;
 	private JButton botonNoAcepto, botonContinuar;
+	String nombreCapturadoJFrameBienvenido = "";
 
-	public LicenciaJFrame() {
+	public Licencia() {
 
 		setLayout(null);
 		setTitle("Licencia de uso");
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
+
+		Bienvenido bienvenidoJFrame = new Bienvenido();
+		nombreCapturadoJFrameBienvenido = bienvenidoJFrame.nombreCapturado;
 
 		etiquetaTerminosCondiciones = new JLabel("TÉRMINOS Y CONDICIONES");
 		etiquetaTerminosCondiciones.setBounds(150,10,250,25);
@@ -42,7 +46,7 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 		scrollPaneAreaTerminosCondiciones.setFocusable(true);
 		add(scrollPaneAreaTerminosCondiciones);
 
-		cajaBoxAcepto = new JCheckBox("Yo Acepto");
+		cajaBoxAcepto = new JCheckBox("Yo " + nombreCapturadoJFrameBienvenido + " Acepto");
 		cajaBoxAcepto.setBounds(15,300,100,20);
 		cajaBoxAcepto.setFont(new Font("FreeSans",1,13));
 		cajaBoxAcepto.addChangeListener(this);
@@ -82,6 +86,15 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 				System.exit(0);
 			}
 		}
+		if(ae.getSource() == botonContinuar) {
+			this.setVisible(false);
+			PantallaPrincipal pantallaPrincipalJFrame = new PantallaPrincipal();
+			pantallaPrincipalJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			pantallaPrincipalJFrame.setBounds(0,0,580,560);
+			pantallaPrincipalJFrame.setResizable(true);
+			pantallaPrincipalJFrame.setLocationRelativeTo(null);
+			pantallaPrincipalJFrame.setVisible(true);
+		}
 	}
 
 	public void stateChanged(ChangeEvent ce) {
@@ -92,17 +105,16 @@ public class LicenciaJFrame extends JFrame implements ActionListener, ChangeList
 			botonNoAcepto.setEnabled(true);
 			botonContinuar.setEnabled(false);
 		}
-
 	}
 
 	public static void main(String[] args) {
 
-		LicenciaJFrame licenciaJFrame = new LicenciaJFrame();
-		licenciaJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		licenciaJFrame.setBounds(0,0,500,470);
-		licenciaJFrame.setResizable(true);
-		licenciaJFrame.setLocationRelativeTo(null);
-		licenciaJFrame.setVisible(true);
+		Licencia licencia = new Licencia();
+		licencia.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		licencia.setBounds(0,0,500,470);
+		licencia.setResizable(true);
+		licencia.setLocationRelativeTo(null);
+		licencia.setVisible(true);
 
 	}
 }

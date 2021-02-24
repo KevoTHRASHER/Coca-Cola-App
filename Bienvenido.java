@@ -2,14 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BienvenidoJFrame extends JFrame implements ActionListener {
+public class Bienvenido extends JFrame implements ActionListener {
 
 	private ImageIcon imagenLogoCocaCola;
 	private JLabel etiquetaLogoCocaCola, etiquetaSistemaControlVacaciones, etiquetaCapturaNombre, etiquetaMarcaRegistrada, etiquetaContraseña;
 	private JTextField campoTextoCapturaNombre, campoContraseña;
 	private JButton botonIngresar;
+	public static String nombreCapturado = "";
 
-	public BienvenidoJFrame() {
+	public Bienvenido() {
 
 		setLayout(null);
 
@@ -78,19 +79,36 @@ public class BienvenidoJFrame extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent ae) {
-		if(ae.getSource() == botonIngresar) {
-
+		if (ae.getSource() == botonIngresar) {
+			nombreCapturado = campoTextoCapturaNombre.getText().trim();
+			if (campoTextoCapturaNombre.getText().length() == 0 ) {
+				JOptionPane.showMessageDialog(null,"INTRODUCE tu NOMBRE","NOMBRE VACÍO",JOptionPane.WARNING_MESSAGE);
+			}
+			if(campoContraseña.getText().length() == 0) {
+				JOptionPane.showMessageDialog(null,"INTRODUCE tu CONTRASEÑA","CONTRASEÑA VACÍA",JOptionPane.WARNING_MESSAGE);
+			}
+			if(campoTextoCapturaNombre.getText().equals(campoContraseña.getText())) {
+				this.setVisible(false);
+				JOptionPane.showMessageDialog(null,"ACCESO OTORGADO");
+				Licencia licencia = new Licencia();
+				licencia.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				licencia.setBounds(0,0,500,470);
+				licencia.setLocationRelativeTo(null);
+				licencia.setVisible(true);
+			} else {
+				JOptionPane.showMessageDialog(null,"Tu NOMBRE Y CONTRASEÑA SON INCORRECTOS, VUELVE a INGRESAR tus DATOS CORRECTAMENTE","LOGIN INCORRECTO",JOptionPane.ERROR_MESSAGE);
+			}
 		}
 	}
 
 	public static void main(String[] args) {
 
-		BienvenidoJFrame bienvenidoJFrame = new BienvenidoJFrame();
-		bienvenidoJFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		bienvenidoJFrame.setBounds(0,0,340,450);
-		bienvenidoJFrame.setResizable(true);
-		bienvenidoJFrame.setLocationRelativeTo(null);
-		bienvenidoJFrame.setVisible(true);
+		Bienvenido bienvenido = new Bienvenido();
+		bienvenido.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		bienvenido.setBounds(0,0,340,450);
+		bienvenido.setResizable(true);
+		bienvenido.setLocationRelativeTo(null);
+		bienvenido.setVisible(true);
 
 	}
 }
